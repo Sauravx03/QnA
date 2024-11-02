@@ -40,11 +40,33 @@
        <!-- <input type="button" name="QA1LSumbit" value="Send" id="ID_QA1LSumbit" onclick="test()"> -->
     </form>
     <br>
+    <br>
     <div id="outputlist">
         <select id="HeadingQuestion" name="HeadingQuestion">
-            <option value="Answer 1">&nbsp;&nbsp;Fill in the blanks&nbsp;&nbsp;</option>
-            <option value="Answer 2">&nbsp;&nbsp;Answer in one sentence&nbsp;&nbsp;</option>
-            <option value="Answer 3">&nbsp;&nbsp;Answer in breif&nbsp;&nbsp;</option>
+            <option value="Fill in the blanks">&nbsp;&nbsp;Fill in the blanks&nbsp;&nbsp;</option>
+            <option value="Answer in one sentence">&nbsp;&nbsp;Answer in one sentence&nbsp;&nbsp;</option>
+            <option value="Answer in breif">&nbsp;&nbsp;Answer in breif&nbsp;&nbsp;</option>
+        </select>
+        <select id="HeadingQuestionMarks" name="HeadingQuestionMarks">
+            <script type="text/javascript">
+                var Marksval = [1,2,3,4,5,6,7,8,9,10,15,20,25,30];
+                //console.log(Marksval.length);
+                for(mc=0;mc<Marksval.length;mc++)
+                {
+                    //console.log(Marksval[mc]);
+                    var OptMark = document.createElement("option");
+                    var OptMarkVal = document.createTextNode(Marksval[mc]);
+
+                    OptMark.append(OptMarkVal);
+
+                    document.getElementById("HeadingQuestionMarks").append(OptMark);
+                }
+
+                /*for(mark=0;mark<Marksval.length;mark++)
+                {
+                    document.getElementById("HeadingQuestionMarks").append(document.createElement("opt").appendChild(document.createTextNode(Marksval[mark]));)
+                }*/
+            </script>
         </select>
         <button onclick="create()">Create</button>
         <hr>
@@ -57,7 +79,8 @@
             var CAlen = document.getElementsByClassName("check1");
             alert(val.value);
             var Ohead = document.createElement("h3");
-            var headTxtNode = val.value;
+            console.log(document.getElementById('HeadingQuestionMarks').value);
+            var headTxtNode = val.value + "     (" + document.getElementById('HeadingQuestionMarks').value + " Marks)";
             Ohead.append(headTxtNode);
             document.getElementById("outputlist-sub").append(Ohead);
 
