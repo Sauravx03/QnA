@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output">
+
+    </div>
+    <script type="text/javascript">
+        var O_ul = document.createElement("ol");
+        
+        var O_li = document.createElement("li");
+        var O_text = document.createTextNode("This is a new paragraph.");
+        O_li.append(O_text);
+        O_ul.append(O_li);
+
+        document.getElementById("output").append(O_ul);
+
+
+    </script>
+</body>
+</html>
