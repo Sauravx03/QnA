@@ -6,8 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="choiceAnswer">Test</p>
-    <hr>
     <h2>Project Question and Answer</h2>
     <form>
         <h2>Question List 1</h2>
@@ -23,7 +21,7 @@
         <input type="checkbox" name="QA1" class="check1" id="QA1L4" value="What is HTML?">
         <label for="QA1L4">What is HTML?</label>
         <br><br>
-        <input type="button" name="QA1LSumbit" value="Send" id="ID_QA1LSumbit" onclick="test()">
+        <!--<input type="button" name="QA1LSumbit" value="Send" id="ID_QA1LSumbit" onclick="test()">-->
     </form>
     <form>
         <h2>Question List 2</h2>
@@ -39,14 +37,14 @@
         <input type="checkbox" name="QA1" class="check1" id="QA2L4" value="Case studies of successful IoT deployments">
         <label for="QA2L4">Case studies of successful IoT deployments</label>
         <br><br>
-        <input type="button" name="QA1LSumbit" value="Send" id="ID_QA1LSumbit" onclick="test()">
+       <!-- <input type="button" name="QA1LSumbit" value="Send" id="ID_QA1LSumbit" onclick="test()"> -->
     </form>
     <br>
     <div id="outputlist">
         <select id="HeadingQuestion" name="HeadingQuestion">
-            <option value="Answer 1">&nbsp;&nbsp;Answer 1&nbsp;&nbsp;</option>
-            <option value="Answer 2">&nbsp;&nbsp;Answer 2&nbsp;&nbsp;</option>
-            <option value="Answer 3">&nbsp;&nbsp;Answer 3&nbsp;&nbsp;</option>
+            <option value="Answer 1">&nbsp;&nbsp;Fill in the blanks&nbsp;&nbsp;</option>
+            <option value="Answer 2">&nbsp;&nbsp;Answer in one sentence&nbsp;&nbsp;</option>
+            <option value="Answer 3">&nbsp;&nbsp;Answer in breif&nbsp;&nbsp;</option>
         </select>
         <button onclick="create()">Create</button>
         <hr>
@@ -87,16 +85,14 @@
             });
         }
 
-
+        /*
         function test(){
             console.clear();
             document.getElementById("outputlist-sub").innerHTML = "";
-            var choiceAnswerOutput = document.getElementById("choiceAnswer");
             var CAlen = document.getElementsByClassName("check1");
             var O_ul = document.createElement("ol");
             var text = "";
 
-            choiceAnswerOutput.innerHTML = CAlen.length;
             for(var i = 0;i<CAlen.length;i++)
             {   
                 
@@ -118,6 +114,7 @@
             alert("OK");
            
         }
+        */
     </script>
 </body>
 </html>
